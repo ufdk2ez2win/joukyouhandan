@@ -123,19 +123,24 @@
         .player-info {
             display: flex;
             flex-direction: column;
-            min-width: 0; /* 文字あふれ防止 */
+            min-width: 0;
         }
 
         .player-info.p1 { text-align: left; }
         .player-info.p2 { text-align: right; }
 
+        /* チーム名表示：折り返しを許可 */
         .team-list-display {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #888;
-            margin-bottom: 2px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            margin-bottom: 4px;
+            white-space: normal;
+            word-break: break-all;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 600px) {
+            .team-list-display { font-size: 0.75rem; }
         }
 
         .char-name {
@@ -592,6 +597,7 @@
         initSelects();
     </script>
 </body>
+</html>
 </html>
 </body>
 </html>
